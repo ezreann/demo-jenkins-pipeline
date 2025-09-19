@@ -35,4 +35,3 @@ archiveArtifacts artifacts: 'target/surefire-reports/.xml', onlyIfSuccessful: fa
 }
 }
 }
-"""))
