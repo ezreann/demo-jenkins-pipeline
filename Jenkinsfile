@@ -70,17 +70,21 @@ pipeline {
 
 
 
-    stage('Publish Test Results') {
+stage('Publish Test Results') {
 
-      steps {
+  steps {
 
-        echo "?? Publication des rapports JUnit"
+    echo "?? Listing reports before publishing"
 
-        junit allowEmptyResults: false, testResults: 'reports/junit.xml'
+    sh 'ls -R'
 
-      }
+    junit allowEmptyResults: false, testResults: 'reports/junit.xml'
 
-    }
+  }
+
+}
+
+
 
 
 
